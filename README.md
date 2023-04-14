@@ -17,6 +17,8 @@ python -m llama.download --model_size 7B
 ```
 
 ![figure 1.](https://raw.githubusercontent.com/noobimp/vicuna_test/main/1.png#pic_center)
+
+
 7B下载完成后是这5个文件，权重文件12.55G
 
 ### 3.权重转换
