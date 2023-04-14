@@ -16,7 +16,7 @@ python -m llama.download --model_size 7B
 #python -m llama.download --model_size 13B
 ```
 
-![figure 1.](https://raw.githubusercontent.com/noobimp/vicuna_test/main/1.png#pic_center)
+![](https://raw.githubusercontent.com/noobimp/vicuna_test/main/1.png#pic_center)
 
 
 7B下载完成后是这5个文件，权重文件12.55G
@@ -31,9 +31,8 @@ python convert_llama_weights_to_hf.py --input_dir ./ --model_size 7B --output_di
 ```
 得到output/7B
 
-<div align=center>
-  ![figure 2.](https://raw.githubusercontent.com/noobimp/vicuna_test/main/2.png)
-</div>
+![](https://raw.githubusercontent.com/noobimp/vicuna_test/main/2.png#pic_center)
+
 
 下面的命令可以自动下载vicuna的delta权重并和转换后的LLaMA权重融合，输出至target目录下
 ```
@@ -45,9 +44,7 @@ python -m fastchat.model.apply_delta \
 ```
 
 此转换命令需要大约30GB内存，得到vicuna_data/vicuna-7b，总大小约14GB。
-<div align=center>
-  ![figure 3.](https://raw.githubusercontent.com/noobimp/vicuna_test/main/3.png)
-</div>
+![](https://raw.githubusercontent.com/noobimp/vicuna_test/main/3.png#pic_center)
     
 ### 4.推理
 GPU
@@ -69,9 +66,7 @@ python -m fastchat.serve.cli --model-path ./vicuna_data/vicuna-7b --device cpu
 可使用--load-8bit压缩，“这可以将内存使用量减少大约一半，同时模型质量略有下降，8bit压缩的 Vicuna-13B可以在单个 NVIDIA 3090/4080/V100(16GB) GPU 上运行。”
 而8bit压缩的7B在CPU上启动后，内存占用约5G，较短的回答内存占用约8-9G，速度感人，我估计10s才1-2个token。
     
-<div align=center>
-  ![figure 4.](https://raw.githubusercontent.com/noobimp/vicuna_test/main/4.png)
-</div>
+![](https://raw.githubusercontent.com/noobimp/vicuna_test/main/4.png#pic_center)
 
 对于7B版本，让它讲讲UCAS怎么样，做一道两数之和a+b=target，大致效果如图。
 可直接启动推理的权重文件可整理后发出~
