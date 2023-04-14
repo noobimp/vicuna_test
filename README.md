@@ -1,5 +1,6 @@
 # vicuna_test
-FastChat/vicuna项目连接 https://github.com/lm-sys/FastChat
+
+直接启动推理的权重文件整理后可发出~后续微调的尝试也在github更新，感兴趣的老板可以点个star
 
 新版本v1.1
 ### 1.安装fastchat和transformers
