@@ -15,7 +15,7 @@ pip install pyllama -U
 python -m llama.download --model_size 7B
 #python -m llama.download --model_size 13B
 ```
-
+![figure 1.](https://raw.githubusercontent.com/noobimp/vicuna_test/main/1.png)
 7B下载完成后是这5个文件，权重文件12.55G
 
 ### 3.权重转换
