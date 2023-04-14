@@ -1,5 +1,6 @@
 # vicuna_test
 FastChat/vicuna项目连接 https://github.com/lm-sys/FastChat
+
 新版本v1.1
 ### 1.安装fastchat和transformers
 ```
