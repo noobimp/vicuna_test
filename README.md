@@ -21,6 +21,7 @@ python -m llama.download --model_size 7B
 ### 3.权重转换
 注意最新分支的转换脚本可能会报错，我用的是这个：
 https://github.com/huggingface/transformers/blob/9eae4aa57650c1dbe1becd4e0979f6ad1e572ac0/src/transformers/models/llama/convert_llama_weights_to_hf.py
+
 可以把这个脚本放在pyllama_data目录下，然后执行：
 ```
 python convert_llama_weights_to_hf.py --input_dir ./ --model_size 7B --output_dir ./output/7B
@@ -28,29 +29,36 @@ python convert_llama_weights_to_hf.py --input_dir ./ --model_size 7B --output_di
 得到output/7B
 
 下面的命令可以自动下载vicuna的delta权重并和转换后的LLaMA权重融合，输出至target目录下
-#base和target路径可以按你本地调整
 ```
+#base和target路径可以按你本地调整
 python -m fastchat.model.apply_delta \
     --base ./pyllama_data/output/7B \
     --target ./vicuna_data/vicuna-7b  \
     --delta lmsys/vicuna-7b-delta-v1.1
 ```
+
 此转换命令需要大约30GB内存，得到vicuna_data/vicuna-7b，总大小约14GB。
 
 ### 4.推理
 GPU
+
 启动推理Vicuna-13B大约需要28GB显存，Vicuna-7B需要14GB显存，可以通过--num-gpus多卡推理。
+
 ```
 python -m fastchat.serve.cli --model-path ./vicuna_data/vicuna-7b --num-gpus 2
 ```
 
 CPU
+
 Vicuna-13B大约需要60GB内存，Vicuna-7B大约需要30GB内存。
+
 ```
 python -m fastchat.serve.cli --model-path ./vicuna_data/vicuna-7b --device cpu
 ```
+
 可使用--load-8bit压缩，“这可以将内存使用量减少大约一半，同时模型质量略有下降，8bit压缩的 Vicuna-13B可以在单个 NVIDIA 3090/4080/V100(16GB) GPU 上运行。”
 而8bit压缩的7B在CPU上启动后，内存占用约5G，较短的回答内存占用约8-9G，速度感人，我估计10s才1-2个token。
+
 
 对于7B版本，让它讲讲UCAS怎么样，做一道两数之和a+b=target，大致效果如图。
 可直接启动推理的权重文件可整理后发出~
