@@ -34,9 +34,9 @@ def twoSum(nums: List[int], target: int) -> List[int]:
                 return [i, j]
     return []
 ```
-This function first sorts the input list `nums` in ascending order. Then it iterates through the sorted list and checks if the difference between each number and the next higher number is equal to the target. If it is, it returns a list of indices of the two numbers. If not, it returns an empty list.
+This function first sorts the input list `nums` in ascending order. Then it iterates through the sorted list and checks if the difference between each number and the next higher number is equal to the target. If it is, it returns a list of indices of the two numbers. If not, it returns an empty list.此函数首先按升序对输入列表 `nums` 进行排序。然后它遍历排序列表并检查每个数字与下一个更高数字之间的差异是否等于目标。如果是，它返回两个数字的索引列表。如果不是，它返回一个空列表。
 
-The function runs in O(n^2) time, where n is the length of the input list `nums`. This is because it sorts the list and then iterates through it twice, which takes O(n) time in the worst case. However, the number of iterations is usually very small (typically less than 10), so the overall running time is usually quite fast.
+The function runs in O(n^2) time, where n is the length of the input list `nums`. This is because it sorts the list and then iterates through it twice, which takes O(n) time in the worst case. However, the number of iterations is usually very small (typically less than 10), so the overall running time is usually quite fast.该函数在 O(n^2) 时间内运行，其中 n 是输入列表的长度nums。这是因为它对列表进行排序，然后遍历它两次，这在最坏的情况下需要 O(n) 时间。但是，迭代次数通常很少（通常少于 10 次），因此整体运行时间通常很快。
 
 USER: exit...
 
