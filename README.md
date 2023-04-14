@@ -2,10 +2,9 @@
 
 直接启动推理的权重文件整理后可发出~后续微调的尝试也在github更新（如果有😊），感兴趣的老板可以点个star
 
-新版本v1.1
-我问它UCAS怎么样and写一道两数之和a+b=target，效果如下：
+对于v1.1 7B的版本，我问它UCAS怎么样and写一道两数之和a+b=target，效果如下：
 
-USER: How about University of Chinese Academy of Sciences
+1.USER: How about University of Chinese Academy of Sciences
 
 ASSISTANT: The University of Chinese Academy of Sciences (UCAS) is a research-oriented university located in Beijing, China. It is one of the leading universities in China and is highly regarded in the fields of natural sciences, technology, and engineering.中国科学院大学（UCAS）是一所位于中国北京的研究型大学。它是中国领先的大学之一，在自然科学、技术和工程领域享有很高的声誉。
 
@@ -15,8 +14,9 @@ UCAS has a beautiful campus located in the heart of Beijing, with modern facilit
 
 Overall, UCAS is a highly respected university with a strong reputation in the fields of natural sciences, technology, and engineering. It is a great choice for students who are interested in pursuing a career in these fields and who want to be part of a diverse and dynamic academic community.总体而言，国科大是一所备受推崇的大学，在自然科学、技术和工程领域享有盛誉。对于有兴趣在这些领域从事职业并希望成为多元化和充满活力的学术社区的一部分的学生来说，这是一个很好的选择。
 
-USER: Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.You may assume that each input would have exactly one solution, and you may not use the same element twice.You can return the answer in any order.
+2.USER: Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.You may assume that each input would have exactly one solution, and you may not use the same element twice.You can return the answer in any order.
 给定一个整数数组 nums 和一个整数 target，返回两个数字的索引，使它们加起来等于 target。您可以假设每个输入都有一个解决方案，并且您可能不会两次使用相同的元素.您可以按任何顺序返回答案。
+
 ASSISTANT: Here is a Python function that solves the problem you described:这是一个 Python 函数，可以解决您描述的问题：
 ```
 def twoSum(nums: List[int], target: int) -> List[int]:
@@ -37,8 +37,6 @@ def twoSum(nums: List[int], target: int) -> List[int]:
 This function first sorts the input list `nums` in ascending order. Then it iterates through the sorted list and checks if the difference between each number and the next higher number is equal to the target. If it is, it returns a list of indices of the two numbers. If not, it returns an empty list.此函数首先按升序对输入列表 `nums` 进行排序。然后它遍历排序列表并检查每个数字与下一个更高数字之间的差异是否等于目标。如果是，它返回两个数字的索引列表。如果不是，它返回一个空列表。
 
 The function runs in O(n^2) time, where n is the length of the input list `nums`. This is because it sorts the list and then iterates through it twice, which takes O(n) time in the worst case. However, the number of iterations is usually very small (typically less than 10), so the overall running time is usually quite fast.该函数在 O(n^2) 时间内运行，其中 n 是输入列表的长度nums。这是因为它对列表进行排序，然后遍历它两次，这在最坏的情况下需要 O(n) 时间。但是，迭代次数通常很少（通常少于 10 次），因此整体运行时间通常很快。
-
-USER: exit...
 
 ### 1.安装fastchat和transformers
 ```
