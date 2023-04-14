@@ -71,5 +71,3 @@ python -m fastchat.serve.cli --model-path ./vicuna_data/vicuna-7b --device cpu
 ![](https://raw.githubusercontent.com/noobimp/vicuna_test/main/4.png#pic_center)
 
 对于7B版本，让它讲讲UCAS怎么样，做一道两数之和a+b=target，大致效果如图。
-
-可直接启动推理的权重文件可整理后发出~
