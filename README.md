@@ -4,7 +4,7 @@
 
 对于v1.1 7B的版本，我问它UCAS怎么样and写一道两数之和a+b=target，效果如下：
 
-1.USER: How about University of Chinese Academy of Sciences
+1.USER: How about University of Chinese Academy of Sciences?中国科学院大学怎么样？
 
 ASSISTANT: The University of Chinese Academy of Sciences (UCAS) is a research-oriented university located in Beijing, China. It is one of the leading universities in China and is highly regarded in the fields of natural sciences, technology, and engineering.中国科学院大学（UCAS）是一所位于中国北京的研究型大学。它是中国领先的大学之一，在自然科学、技术和工程领域享有很高的声誉。
 
