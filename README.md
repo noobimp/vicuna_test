@@ -7,17 +7,17 @@
 
 USER: How about University of Chinese Academy of Sciences
 
-ASSISTANT: The University of Chinese Academy of Sciences (UCAS) is a research-oriented university located in Beijing, China. It is one of the leading universities in China and is highly regarded in the fields of natural sciences, technology, and engineering.
+ASSISTANT: The University of Chinese Academy of Sciences (UCAS) is a research-oriented university located in Beijing, China. It is one of the leading universities in China and is highly regarded in the fields of natural sciences, technology, and engineering.中国科学院大学（UCAS）是一所位于中国北京的研究型大学。它是中国领先的大学之一，在自然科学、技术和工程领域享有很高的声誉。
 
-UCAS has a highly diverse student population, with students from China and many other countries around the world. The university offers a wide range of programs in the natural sciences, engineering, and technology, as well as in the humanities and social sciences. It has a strong emphasis on research and offers opportunities for students to work on cutting-edge projects with leading researchers in their fields.
+UCAS has a highly diverse student population, with students from China and many other countries around the world. The university offers a wide range of programs in the natural sciences, engineering, and technology, as well as in the humanities and social sciences. It has a strong emphasis on research and offers opportunities for students to work on cutting-edge projects with leading researchers in their fields.UCAS 拥有高度多样化的学生群体，学生来自中国和世界上许多其他国家。该大学提供范围广泛的自然科学、工程和技术以及人文和社会科学课程。它非常重视研究，并为学生提供与各自领域的领先研究人员一起从事尖端项目的机会。
 
-UCAS has a beautiful campus located in the heart of Beijing, with modern facilities and resources to support students' academic and personal development. The university has a strong international focus and offers a range of programs and initiatives to support international students, including language courses, cultural events, and exchange programs.
+UCAS has a beautiful campus located in the heart of Beijing, with modern facilities and resources to support students' academic and personal development. The university has a strong international focus and offers a range of programs and initiatives to support international students, including language courses, cultural events, and exchange programs.国科大拥有位于北京市中心的美丽校园，拥有现代化的设施和资源，支持学生的学术和个人发展。该大学非常注重国际，并提供一系列计划和举措来支持国际学生，包括语言课程、文化活动和交流计划。
 
-Overall, UCAS is a highly respected university with a strong reputation in the fields of natural sciences, technology, and engineering. It is a great choice for students who are interested in pursuing a career in these fields and who want to be part of a diverse and dynamic academic community.
+Overall, UCAS is a highly respected university with a strong reputation in the fields of natural sciences, technology, and engineering. It is a great choice for students who are interested in pursuing a career in these fields and who want to be part of a diverse and dynamic academic community.总体而言，国科大是一所备受推崇的大学，在自然科学、技术和工程领域享有盛誉。对于有兴趣在这些领域从事职业并希望成为多元化和充满活力的学术社区的一部分的学生来说，这是一个很好的选择。
 
-USER: Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.You may assume that each inASSISTANT: put would have exactly one solution, and you may not use the same element twice.You can return the answer in any order.
-
-ASSISTANT: Here is a Python function that solves the problem you described:
+USER: Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.You may assume that each input would have exactly one solution, and you may not use the same element twice.You can return the answer in any order.
+给定一个整数数组 nums 和一个整数 target，返回两个数字的索引，使它们加起来等于 target。您可以假设每个输入都有一个解决方案，并且您可能不会两次使用相同的元素.您可以按任何顺序返回答案。
+ASSISTANT: Here is a Python function that solves the problem you described:这是一个 Python 函数，可以解决您描述的问题：
 ```
 def twoSum(nums: List[int], target: int) -> List[int]:
     """
