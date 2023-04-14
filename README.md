@@ -44,6 +44,7 @@ python -m fastchat.model.apply_delta \
 ```
 
 此转换命令需要大约30GB内存，得到vicuna_data/vicuna-7b，总大小约14GB。
+
 ![](https://raw.githubusercontent.com/noobimp/vicuna_test/main/3.png#pic_center)
     
 ### 4.推理
