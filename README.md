@@ -3,6 +3,43 @@
 直接启动推理的权重文件整理后可发出~后续微调的尝试也在github更新（如果有😊），感兴趣的老板可以点个star
 
 新版本v1.1
+我问它UCAS怎么样and写一道两数之和a+b=target，效果如下：
+
+USER: How about University of Chinese Academy of Sciences
+
+ASSISTANT: The University of Chinese Academy of Sciences (UCAS) is a research-oriented university located in Beijing, China. It is one of the leading universities in China and is highly regarded in the fields of natural sciences, technology, and engineering.
+
+UCAS has a highly diverse student population, with students from China and many other countries around the world. The university offers a wide range of programs in the natural sciences, engineering, and technology, as well as in the humanities and social sciences. It has a strong emphasis on research and offers opportunities for students to work on cutting-edge projects with leading researchers in their fields.
+
+UCAS has a beautiful campus located in the heart of Beijing, with modern facilities and resources to support students' academic and personal development. The university has a strong international focus and offers a range of programs and initiatives to support international students, including language courses, cultural events, and exchange programs.
+
+Overall, UCAS is a highly respected university with a strong reputation in the fields of natural sciences, technology, and engineering. It is a great choice for students who are interested in pursuing a career in these fields and who want to be part of a diverse and dynamic academic community.
+
+USER: Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.You may assume that each inASSISTANT: put would have exactly one solution, and you may not use the same element twice.You can return the answer in any order.
+
+ASSISTANT: Here is a Python function that solves the problem you described:
+```
+def twoSum(nums: List[int], target: int) -> List[int]:
+    """
+    Given an array of integers nums and an integer target, return the indices of the two numbers such that they add up to target.
+
+    :param nums: A list of integers
+    :param target: The target number to find the two numbers that add up to
+    :return: A list of indices of the two numbers
+    """
+    nums.sort()
+    for i in range(len(nums)):
+        for j in range(i+1, len(nums)):
+            if nums[i] + nums[j] == target:
+                return [i, j]
+    return []
+```
+This function first sorts the input list `nums` in ascending order. Then it iterates through the sorted list and checks if the difference between each number and the next higher number is equal to the target. If it is, it returns a list of indices of the two numbers. If not, it returns an empty list.
+
+The function runs in O(n^2) time, where n is the length of the input list `nums`. This is because it sorts the list and then iterates through it twice, which takes O(n) time in the worst case. However, the number of iterations is usually very small (typically less than 10), so the overall running time is usually quite fast.
+
+USER: exit...
+
 ### 1.安装fastchat和transformers
 ```
 pip install fschat
